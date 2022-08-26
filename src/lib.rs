@@ -13,9 +13,10 @@ fn above_below(x: f64, lower: f64, upper: f64) -> f64 {
     }
 }
 
+
 /// A Python module implemented in Rust.
 #[pymodule]
-fn milofuncs(_py: Python, m: &PyModule) -> PyResult<()> {
+fn rustpentor(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(above_below, m)?)?;
     Ok(())
 }
